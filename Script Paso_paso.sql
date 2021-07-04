@@ -141,3 +141,31 @@ SELECT *FROM productos ORDER BY nombre desc;
 SELECT *FROM productos ORDER BY nombre ASC , existencia ASC;
 
 
+SELECT *FROM productos WHERE idCategoria=1 AND precio 10;
+
+SELECT *FROM productos WHERE idCategoria=1 OR precio 10;
+
+SELECT *FROM productos WHERE idCategoria<>1;
+SELECT *FROM productos WHERE idCategoria<=1;
+SELECT *FROM productos WHERE idCategoria=>3;
+
+SELECT *FROM productos WHERE precio  NULL;
+SELECT *FROM productos WHERE precio IS NOT NULL;
+
+SELECT *FROM productos WHERE precio BETWEEN 5 AND 10;
+SELECT *FROM productos WHERE precio NOT IN(5,6,7,8,9,10);
+
+SELECT *FROM productos WHERE DATE(fecha_alta) BETWEEN  '2015-01-01' AND '2016-07-24'
+
+SELECT *FROM prodcutos WHERE precio =5+5;
+
+SELECT *FROM prodcutos WHERE nombre LIKE 'Limonada';
+
+SELECT *FROM prodcutos WHERE nombre LIKE '%Limon%';
+
+SELECT *FROM prodcutos WHERE nombre NOT LIKE 'Limonada' ;
+
+SELECT *FROM productos WHERE idCategoria=2 NAD precio>10 AND existencia BETWEEN 5 AND 20 fecha_alta IS NOT NULL
+
+SELECT *FROM productos WHERE idCategoria IN(SELECT id FROM categoria WHERE id>2)
+
