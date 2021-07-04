@@ -63,10 +63,47 @@ ALTER TABLE productos DROP FOREIGN KEY  fk_Carpro;
 
 ALTER TABLE productos DROP COLUMN idCategoria;
 
+INSERT INTO categoria VALUES (NULL  'Bebidas');
+
+SELECT *FROM categoria;
+
+INSERT INTO categorias (nombre) VALUES ('aceites');
+
+INSERT INTO categoria (nombre) VALUES ('Detergente'),('dulce'),('frituras');
+
+INSERT INTO categoria SET nombre='Categoria';
+
+SHOW COLUMNS FROM productos;
+
+INSERT INTO productos (nombre, precio ,idCategoria) VALUES ('Refresco', 8.50 , 1);
+
+INSERT INTO productos(nombre  precio , fecha_alta  idCategoria)
+
+VALUES('Paleta', 5 ,'CURDATE',5)
+
+UPDATE categoria SET nombre='Modificado WHRERE id='1';
 
 
+SELECT * FROM categoria;
 
 
+UPDATE productos SET nombre='Refresco 1' , precio='12.60' WHERE idProducto=1;
+
+
+SELECT * FROM productos;
+
+
+ALTER TABLE productos ADD COLUMN existencia INT NOT NULL;
+
+UPDATE productos SET existencia = existencia + 5 WHERE idProducto=1;
+
+UPDATE productos SET precio =REPLACE(precio, 5, 6);
+
+SELECT * FROM productos;
+
+UPDATE productos SET precio =REPLACE(nombre, "leta", "letita");
+
+SELECT * FROM productos;
 
 
 
