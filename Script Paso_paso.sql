@@ -169,3 +169,17 @@ SELECT *FROM productos WHERE idCategoria=2 NAD precio>10 AND existencia BETWEEN 
 
 SELECT *FROM productos WHERE idCategoria IN(SELECT id FROM categoria WHERE id>2)
 
+SELECT *FROM productos, categoria WHERE idCategoria=id;
+
+SELECT p.nombre,p.precio,p.existencia,c.nombre FROM productos AS P INNER JOIN categoria AS c ON p.idCategoria=c.id WHERE p.idCategoria=2;
+
+SELECT p.nombre,p.precio,p.existencia,t.nombre FROM productos AS P LEFT JOIN temp AS t ON p.idCategoria=t.id;
+
+
+SELECT p.nombre,p.precio,p.existencia,t.nombre FROM productos AS P RIGHT JOIN temp AS t ON p.idCategoria=t.id;
+
+
+SELECT p.nombre AS producto , c.nombre AS categoria FROM productos AS p INNER JOIN categoria AS c ON p.idCategoria=c.id INNER JOIN detalle_producto_proveedor AS det ON p.idProdcuto=det.id INNER JOIN proveedore AS pv ON det.id=pv.id;
+
+SELECT * FROM categoria UNION SELECT idProducto,nombre FROM productos;
+
