@@ -106,5 +106,17 @@ UPDATE productos SET precio =REPLACE(nombre, "leta", "letita");
 SELECT * FROM productos;
 
 
+DELETE FROM productos WHERE idProducto=4;
+
+SELECT *FROM productos;
+
+
+INSERT INTO productos (nombre, precio , fecha_alta , idCategoria; existencia)
+VALUES ('Refresco',10, '2016-01-01', 2 ,10);
+
+SET FOREIGN_KEY CHECKS=0;
+TRUNCATE TABLE productos;
+SET FOREIGN_KEY CHECKS=1;
+
 
 
