@@ -45,6 +45,28 @@ DROP TABLE producto;
 SWOW TABLES;
 
 
+CREATE TABLE categoria(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(50) NOT NULL
+);
+
+SHOW TABLES;
+
+
+ALTER TABLE productos ADD idCategoria INT NOT NULL;
+
+SHOW COLUMNS FROM  productos;
+
+ALTER TABLE productos ADD CONSTRAINT fk_Carpro FOREIGN KEY (idCategoria) REFERENCES categoria (id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE productos DROP FOREIGN KEY  fk_Carpro;
+
+ALTER TABLE productos DROP COLUMN idCategoria;
+
+
+
+
+
 
 
 
