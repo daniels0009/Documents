@@ -120,3 +120,24 @@ SET FOREIGN_KEY CHECKS=1;
 
 
 
+SELECT *FROM productos;
+
+
+SELECT nombre AS Nombre, precio AS Precio ,existencia , idCategoria FROM productos WHERE eixtencia>10;
+
+SELECT COUNT(idProducto) AS Cantidad ,idCategoria FROM productos GROUP BY idCategoria;
+
+SELECT MIN(existencia) AS existencia_minima , MAX(existencia) AS existencia_maxima FROM productos;
+
+SELECT *FROM productos LIMIT 5;
+
+SELECT *FROM productos LIMIT 3 ,10;
+
+
+SELECT *FROM productos ORDER BY nombre ASC;
+
+SELECT *FROM productos ORDER BY nombre desc;
+
+SELECT *FROM productos ORDER BY nombre ASC , existencia ASC;
+
+
