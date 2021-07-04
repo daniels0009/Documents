@@ -8,4 +8,4 @@ _ 1.Definir modelo relacional de base de datos que soporte la información de un
 ![Modelo](Modelo.PNG)
 
 
-_ 2.Generar el script SQL del modelo anterior. (#script SQL del modelo de vuelo..sql)_
+_ 2.Generar el script SQL del modelo anterior. (script SQL del modelo de vuelo)_
